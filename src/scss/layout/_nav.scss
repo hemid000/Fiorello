@@ -32,12 +32,37 @@
                 }      
             }      
         }
-        #search_click{
+        #search_click{ 
+            position: relative;
             cursor: pointer;
             &:hover{
                 color: red;
             }
-        }
+            .search{    
+                transition: .3s all;
+                 overflow: hidden;
+                display: none;
+                @include _main($position:absolute , $height:0px , $top:67px , $left:-273px , $display:flex , $width:300px);
+                form{
+                    @include _main($display:flex , $align_it:center , $width:292px);
+                      input{
+                    @include _main($width:120%, $padding: 12px, $border:1px solid transparent , $back-color:$eight_color);
+                    outline: none;
+                    font-size: 14px;
+                }
+                button{
+                    @include _main($margin: 0 0 0 -5px ,$padding: 12px, $border:1px solid transparent , $back-color:$eight_color);
+                    outline: none;
+                    font-size: 14px;      
+                }  
+                }
+            }
+       .active {
+                    overflow: hidden;
+                    display: block;
+                    height: 60px;
+                }
+        }   
         #home{
             position: relative; 
             a{
