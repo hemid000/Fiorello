@@ -593,7 +593,8 @@
   color: #6d6a6a;
   line-height: 29px;
 }
-#wpb_wrapper .img_rightside {
+#wpb_wrapper #img_rightside {
+  transition: 0.3s ease-in-out;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -602,13 +603,20 @@
   overflow: hidden;
   z-index: 0;
 }
-#wpb_wrapper .img_rightside img {
+#wpb_wrapper #img_rightside img {
+  transition: 0.5s ease-in-out;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   transform: scale(1.35);
 }
-#wpb_wrapper .img_rightside:hover img {
-  transform: scale(1);
+#wpb_wrapper #img_rightside #first {
+  opacity: 1;
+}
+#wpb_wrapper #img_rightside #second {
+  opacity: 0;
+}
+#wpb_wrapper #img_rightside #third {
+  opacity: 0;
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,7 @@
 const bi_search = document.querySelector(".bi-search");
 const search = document.querySelector(".search");
-const img_right =  document.getElementsByClassName('img_rightside');
+
+
 
 if (bi_search) {
     bi_search.addEventListener("click", (e) => {
@@ -9,34 +10,44 @@ if (bi_search) {
     })
 }
 
-var data_img = [
-    {
-        imgUrl: 'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background.jpg'
-    }
-    ,
-    {
-        imgUrl: 'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-2.jpg'
-    }
-    ,
-    {
-        imgUrl: 'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-3.jpg'
-    }
-]
+
+const first = document.getElementById('first');
+const second = document.getElementById('second');
+const third = document.getElementById('third');
 
 
-//    var map  = data_img.map(el =>
-//     `
-//      <img src="${el.imgUrl}" alt="">
-//      `
-// )
-   var map  = data_img.map((el)=>{
-    `
-    <img src="${el.imgUrl}" alt="">
+if (first) {
 
-    `
-   })
 
-img_right.innerHTML += map;
+      
+
+
+    setInterval(() => {
+       
+        first.style.opacity = "0";
+    }, 2000);
+    
+}  
+
+if (second) {
+   setInterval(() => {
+    second.style.opacity = "1";
+   }, 2000);
+    setInterval(() => {
+        second.style.opacity = "0";
+    }, 4000);
+    
+}
+// if (third) {
+//     setTimeout(() => {
+//         third.style.display = "block";
+//     }, 4000);
+//     setTimeout(() => {
+//         third.style.display = "none";
+//     }, 6000);
+    
+// }
+
 
 
 
