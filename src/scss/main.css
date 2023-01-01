@@ -557,4 +557,58 @@
   margin: 0px;
   padding: 0px;
   font-size: 14px;
+}
+
+#wpb_wrapper {
+  position: relative;
+  background-color: #f3f3f3;
+}
+#wpb_wrapper .left_side {
+  position: relative;
+  z-index: 1;
+}
+#wpb_wrapper .left_side .header {
+  width: 65%;
+  color: black;
+  text-align: inherit;
+  font-size: 41px;
+  gap: 15px;
+}
+#wpb_wrapper .left_side .header h3 {
+  margin: 0px;
+  text-align: inherit;
+  font-size: 41px;
+  display: inline;
+  font-weight: 400;
+}
+#wpb_wrapper .left_side .header #flowers {
+  color: red;
+  text-align: inherit;
+  font-size: 41px;
+  font-weight: 400;
+}
+#wpb_wrapper .left_side #title {
+  width: 80%;
+  margin: 20px 0;
+  color: #6d6a6a;
+  line-height: 29px;
+}
+#wpb_wrapper .img_rightside {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+#wpb_wrapper .img_rightside img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: scale(1.35);
+}
+#wpb_wrapper .img_rightside:hover img {
+  transform: scale(1);
 }/*# sourceMappingURL=main.css.map */
