@@ -122,7 +122,7 @@
   width: 100%;
   height: 1px;
   position: absolute;
-  top: 70px;
+  top: 64px;
   left: 0px;
   background-color: black;
   content: "";
@@ -614,4 +614,48 @@
   -o-object-fit: contain;
      object-fit: contain;
   transform: scale(1.55);
+}
+
+#filter_cart {
+  margin-top: 90px;
+}
+#filter_cart ul {
+  margin: 0px;
+  padding: 0px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style-type: none;
+}
+#filter_cart ul li {
+  list-style: none;
+  cursor: pointer;
+}
+#filter_cart ul .active {
+  color: red;
+}
+#filter_cart .grid {
+  overflow: visible;
+  margin-top: 50px;
+  width: 100%;
+}
+#filter_cart .grid .portfolio_list {
+  position: relative;
+  float: left;
+  width: 300px;
+  margin: 5px;
+  padding: 10px;
+  color: #262524;
+}
+#filter_cart .grid .portfolio_list img {
+  transition: 0.1s ease-in-out;
+  width: 90%;
+  height: 90%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#filter_cart .grid .portfolio_list img:hover {
+  transform: scale(1.037);
 }/*# sourceMappingURL=main.css.map */

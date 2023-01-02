@@ -46,3 +46,15 @@ window.onload = ChangeImg
 //     }, 6000);
 
 // }
+
+
+// init Isotope
+// var $grid = $('.grid').isotope({
+//     // options
+//   });
+//   // filter items on button click
+//   $('.listtt').on( 'click', 'li', function() {
+//     var filterValue = $(this).attr('data-filter');
+//     $grid.isotope({ filter: filterValue });
+//   });
+

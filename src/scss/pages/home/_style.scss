@@ -38,3 +38,47 @@
             }
         }
 }
+
+#filter_cart{
+    margin-top: 90px;
+    ul{
+        @include _main($display:flex , $color: $fourth_color , $margin:0px , $padding:0px) ;
+        flex-direction: row;
+        gap: 20px;
+        list-style-type: none;
+        li{
+            list-style: none;
+            cursor: pointer;
+
+
+    }
+    .active{
+        color: red;
+    }
+}
+.grid{
+    overflow: visible;
+    margin-top: 50px;
+    width: 100%;
+    .portfolio_list{
+      
+        position: relative;
+        float: left;
+        width: 300px;
+        
+        margin: 5px;
+        padding: 10px;
+    
+        color: #262524;
+           img{
+            transition: .1s ease-in-out;
+    
+        @include _main($cursor:pointer , $width:90% , $height:90% , $object_f:cover);
+        &:hover{
+            transform: scale(1.037);
+        }
+    }
+    }
+ 
+}
+}
