@@ -1,43 +1,42 @@
-const bi_search = document.querySelector(".bi-search");
-const search = document.querySelector(".search");
-
-
+const bi_search = document.querySelector('.bi-search')
+const search = document.querySelector('.search')
 
 if (bi_search) {
-    bi_search.addEventListener("click", (e) => {
-        search.classList.toggle("active");
-
-    })
+  bi_search.addEventListener('click', e => {
+    search.classList.toggle('active')
+  })
 }
 
+const Images = document.querySelector('#imgs_sec')
 
-const first = document.getElementById('first');
-const second = document.getElementById('second');
-const third = document.getElementById('third');
+Images[0] =
+  'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background.jpg'
+Images[1] =
+  'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-2.jpg'
+Images[2] =
+  'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-3.jpg'
 
+for (let i = 0; i < 3; i++) {
+  function ChangeImg () {
+    Images.src = Images[i]
 
-if (first) {
+    if (Images) {
+      Images.style.transform = 'scale(1.35)'
 
+      if (i < 2) {
+        i++
+      } else {
+        i = 0
+        Images.style.transform = 'scale(1.25)'
+      }
+    }
 
-      
-
-
-    setInterval(() => {
-       
-        first.style.opacity = "0";
-    }, 2000);
-    
-}  
-
-if (second) {
-   setInterval(() => {
-    second.style.opacity = "1";
-   }, 2000);
-    setInterval(() => {
-        second.style.opacity = "0";
-    }, 4000);
-    
+    setTimeout(' ChangeImg() ', 5000)
+  }
 }
+
+window.onload = ChangeImg
+
 // if (third) {
 //     setTimeout(() => {
 //         third.style.display = "block";
@@ -45,9 +44,5 @@ if (second) {
 //     setTimeout(() => {
 //         third.style.display = "none";
 //     }, 6000);
-    
+
 // }
-
-
-
-
