@@ -17,7 +17,7 @@ Images[2] =
   'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-3.jpg'
 
 for (let i = 0; i < 3; i++) {
-  function ChangeImg () {
+  function ChangeImg() {
     Images.src = Images[i]
 
     if (Images) {
