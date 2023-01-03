@@ -232,7 +232,7 @@ form{
         @include _main($display:flex , $align_it:center , $just_content:center);
         flex-direction: column;
         .img{
-            @include _main($width:100% , $height:268px , $position:relative );
+            @include _main($cursor:pointer ,$width:100% , $height:268px , $position:relative );
             overflow: hidden;
             transform: scale(1);
             img{
@@ -260,5 +260,52 @@ form{
             color: #979797;
             text-align: center;
            }
+    }
+}
+#wpb_wrapper_swiper{
+    margin-top: 130px;
+.swiper-button-prev{
+    left: 220px !important;
+    .bi{
+        font-size: 36px;
+          color: #bcbcbc;
+    }
+    &::after{
+        content: "";
+    }
+}
+.swiper-button-next{
+    right: 220px;
+    .bi{
+        font-size: 36px;
+        color: #bcbcbc;
+    }
+    &::after{
+        content: "";
+    }
+}
+    .cart_swiper{
+        max-width: 600px;
+        flex-direction: column;
+        @include _main($margin:0 auto , $text-align:center , $display:flex ,$align_it:center , $just_content:center );
+     img{
+        @include _main($width:87px , $height:87px , $object_f:contain);
+     }
+     p{
+        font-size: 21px;
+        font-style: italic;
+        color: #4b4747;
+        margin: 15px 0 30px 0;
+     }
+     span{
+        font-size: 15px;
+        margin: 5px 0 10px 0;
+     }
+     #florist{
+        font-size: 24px;
+        font-style: italic;
+        color: #4b4747;
+        margin: 15px 0 30px 0;
+     }
     }
 }

@@ -37,24 +37,51 @@ for (let i = 0; i < 3; i++) {
 
 window.onload = ChangeImg
 
-// if (third) {
-//     setTimeout(() => {
-//         third.style.display = "block";
-//     }, 4000);
-//     setTimeout(() => {
-//         third.style.display = "none";
-//     }, 6000);
-
-// }
 
 
-// init Isotope
-// var $grid = $('.grid').isotope({
-//     // options
-//   });
-//   // filter items on button click
-//   $('.listtt').on( 'click', 'li', function() {
-//     var filterValue = $(this).attr('data-filter');
-//     $grid.isotope({ filter: filterValue });
-//   });
+//jquery izotope
 
+$(".grid").isotope({
+  itemSelector: ".portfolio_list",
+  layoutMode: "fitRows",
+});
+$(".list ul li").click(function () {
+  $(".list ul li").removeClass("active");
+  $(this).addClass("active");
+
+  var selector = $(this).attr("data-filter");
+  $(".grid").isotope({
+    filter: selector,
+  });
+  return false;
+});
+
+
+
+// swiper 
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".bi-arrow-right",
+    prevEl: ".bi-arrow-left",
+  },
+  // breakpoints: {
+
+  //   1024: {
+  //     slidesPerView: 1,
+  //     spaceBetween: 20,
+  //   },
+  //   1600: {
+  //     slidesPerView: 1,
+  //     spaceBetween: 20,
+  //   },
+
+  // },
+
+});
