@@ -144,3 +144,35 @@
         }
     }
 }}
+#wpb-cart-wrapper{
+    margin: 100px 0;
+    font-family: "Playfair Display",serif;
+       h3{
+        font-size: 35px;
+       }
+       #text_p{
+        width: 46%;
+        margin: 20px auto 35px auto;
+        font-size: 16px;
+        color: #979797;
+       }
+       .cart{
+        @include _main( $display:flex , $just_content:center , $align_it:center);
+        margin: 25px 0;
+        flex-direction: column;
+        .img{
+            @include _main($margin:0 0 22px 0 ,$width:222px , $height:222px);
+            img{
+                @include _main($width:100% , $height:100% , $object_f:contain);
+            }
+        }
+        span{
+            font-size: 14px;
+        }
+        p{
+            font-size: 13px;
+            margin: 10px 0 ;
+            color: #979797;
+        }
+       }
+}

@@ -759,4 +759,44 @@
 #wpb-content-wrapper .right_side ul li img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+#wpb-cart-wrapper {
+  margin: 100px 0;
+  font-family: "Playfair Display", serif;
+}
+#wpb-cart-wrapper h3 {
+  font-size: 35px;
+}
+#wpb-cart-wrapper #text_p {
+  width: 46%;
+  margin: 20px auto 35px auto;
+  font-size: 16px;
+  color: #979797;
+}
+#wpb-cart-wrapper .cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+  flex-direction: column;
+}
+#wpb-cart-wrapper .cart .img {
+  width: 222px;
+  height: 222px;
+  margin: 0 0 22px 0;
+}
+#wpb-cart-wrapper .cart .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#wpb-cart-wrapper .cart span {
+  font-size: 14px;
+}
+#wpb-cart-wrapper .cart p {
+  font-size: 13px;
+  margin: 10px 0;
+  color: #979797;
 }/*# sourceMappingURL=main.css.map */
