@@ -176,3 +176,42 @@
         }
        }
 }
+#wpb-search{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Playfair Display",serif;
+    padding: 185px 0;
+    background-attachment: fixed;
+    .middle{
+            h3{
+     font-size: 30px;
+     color: white;
+    }
+form{
+    margin-top: 29px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+        input{
+        outline: none;
+        border: 1px solid transparent;
+        background-color: white;
+        font-size: 14px;
+        padding: 22px;
+        width: 37%;
+    }
+    button{
+        font-size: 14px;
+        width: 13%;
+        padding: 23px;
+        outline: none;
+        border: 1px solid transparent;
+        color: white;
+        background-color: #ff3d2a;
+    }
+}
+}
+}
