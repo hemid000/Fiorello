@@ -803,7 +803,6 @@
 
 #wpb-search {
   margin-top: 100px;
-  margin-bottom: 100px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -832,9 +831,71 @@
 #wpb-search .middle form button {
   font-size: 14px;
   width: 13%;
-  padding: 23px;
+  padding: 22px;
   outline: none;
   border: 1px solid transparent;
   color: white;
   background-color: #ff3d2a;
+}
+
+#wpb_wrapper_blog {
+  padding: 100px 0;
+  background-color: #f7f7f7;
+  font-family: "Playfair Display", serif;
+}
+#wpb_wrapper_blog .header h3 {
+  font-size: 35px;
+}
+#wpb_wrapper_blog .header #text_p {
+  width: 46%;
+  margin: 25px auto 55px auto;
+  font-size: 16px;
+  color: #979797;
+}
+#wpb_wrapper_blog .cart_blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#wpb_wrapper_blog .cart_blog .img {
+  width: 100%;
+  height: 268px;
+  position: relative;
+  overflow: hidden;
+  transform: scale(1);
+}
+#wpb_wrapper_blog .cart_blog .img img {
+  transition: 0.2s ease-in-out;
+  width: 100%;
+  height: 268px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#wpb_wrapper_blog .cart_blog .img .time_box {
+  transition: 0.3s ease-in-out;
+  padding: 9px 19px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: black;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 11px;
+}
+#wpb_wrapper_blog .cart_blog .img .time_box:hover {
+  color: #ff3d2a;
+}
+#wpb_wrapper_blog .cart_blog .img:hover img {
+  transform: scale(1.04);
+}
+#wpb_wrapper_blog .cart_blog h3 {
+  font-size: 23px;
+  margin: 32px 0 15px 0;
+  font-weight: 300;
+}
+#wpb_wrapper_blog .cart_blog p {
+  font-size: 14px;
+  color: #979797;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
