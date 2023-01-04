@@ -83,3 +83,29 @@ var swiper = new Swiper(".mySwiper", {
   //   },
   // },
 });
+
+// navbar scroll fixed 
+
+let navbar = document.querySelector('#nav1');
+document.addEventListener('scroll', () => {
+  if (window.top.scrollY > 200) {
+    navbar.classList.add('scroll');
+
+  }
+  else {
+    navbar.classList.remove('scroll');
+  }
+})
+
+// scroll upbutton
+
+let upbutton = document.querySelector('#scroll_topbutton');
+document.addEventListener('scroll', () => {
+  if (window.top.scrollY > 500) {
+    upbutton.classList.add('active');
+
+  }
+  else {
+    upbutton.classList.remove('active');
+  }
+})

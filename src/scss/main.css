@@ -563,6 +563,43 @@
   font-size: 14px;
 }
 
+.scroll {
+  background-color: white;
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  top: -100px;
+  -webkit-animation: fadedown 0.8s ease forwards;
+          animation: fadedown 0.8s ease forwards;
+}
+.scroll #cart_add {
+  display: none !important;
+}
+.scroll .bi-search {
+  display: none;
+}
+
+@-webkit-keyframes fadedown {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes fadedown {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
 #wpb_wrapper {
   position: relative;
   background-color: #f3f3f3;
@@ -954,6 +991,94 @@
   font-style: italic;
   color: #4b4747;
   margin: 15px 0 30px 0;
+}
+
+#scroll_topbutton {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #f34f3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s all;
+}
+#scroll_topbutton .bi {
+  color: white;
+  font-size: 20px;
+}
+
+.active {
+  opacity: 1 !important;
+  bottom: 50px;
+}
+
+#advertisement {
+  position: fixed;
+  bottom: 200px;
+  right: 0px;
+  background-color: #ef2853;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 118px;
+  height: 44px;
+  box-shadow: 0 0 0 1px #bbbbbb;
+  font-size: 14px;
+  cursor: pointer;
+}
+#advertisement svg {
+  fill: #fff;
+  height: 26px;
+}
+
+#buy {
+  cursor: pointer;
+  position: fixed;
+  bottom: 154px;
+  right: 0px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 118px;
+  height: 44px;
+  box-shadow: 0 0 0 1px #bbbbbb;
+  font-size: 14px;
+}
+#buy .bi {
+  color: #ef2853;
+}
+
+.offcanvas {
+  width: 300px !important;
+}
+.offcanvas h5 {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+.offcanvas-body .img {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+}
+.offcanvas-body .img img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.offcanvas-body .img p {
+  margin: 5px 0;
 }
 
 #foot {
