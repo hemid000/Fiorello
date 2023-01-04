@@ -312,7 +312,6 @@ form{
      }
     }
 }
-
 #scroll_topbutton{
     width: 50px;
     height: 50px;
@@ -325,20 +324,15 @@ form{
     justify-content: center;
     opacity: 0;
     transition: .5s all;
-
-
     .bi{
         color: white;
         font-size: 20px;
     }
 }
 .active {
-
    opacity: 1 !important;
   bottom: 50px;
 }
-
-
 #advertisement{
     position: fixed;
     bottom: 200px;
@@ -353,12 +347,9 @@ form{
     box-shadow: 0 0 0 1px #bbbbbb;
     font-size: 14px;
     cursor: pointer;
-
     svg{
         fill: #fff;
         height: 26px;
-    
-        
     }
 }
 #buy{
@@ -375,13 +366,10 @@ form{
     height: 44px;
     box-shadow: 0 0 0 1px #bbbbbb;
     font-size: 14px;
-
-
           .bi{
              color: #ef2853;
           }
 }
-
 .offcanvas{
     width: 300px !important;
     h5{
@@ -401,7 +389,6 @@ form{
         img{
             width: 100%;
             object-fit: contain;
-
         }
         p{
             margin: 5px 0;
