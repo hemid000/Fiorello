@@ -17,7 +17,17 @@
                 &:hover{
                     color: rgb(255, 40, 40);
                 }
+                @media (max-width:479px) {
+                    font-size: 10px;
+                    
+                }
             }
+        }
+    }
+    p{
+        @media (max-width:479px) {
+            font-size: 13px;
+            
         }
     }
    }
@@ -26,7 +36,7 @@
         @include _main($f_size:13px , $padding:20px 0 , $color:#989898 );
         border-top:1px solid #d9d9d9 ;
         a{
-            @include _main($color:#8b8b8b , $f_size:14px ,);
+            @include _main($color:#8b8b8b , $f_size:11px ,);
             text-decoration: none;
             transition: .3s ease-in-out;
             &:hover{

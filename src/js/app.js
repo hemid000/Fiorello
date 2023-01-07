@@ -8,6 +8,7 @@ if (bi_search) {
 }
 
 const Images = document.querySelector('#imgs_sec')
+const img_rightside = document.querySelector('#img_rightside')
 
 Images[0] =
   'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background.jpg'
@@ -19,25 +20,22 @@ Images[2] =
 for (let i = 0; i < 3; i++) {
   function ChangeImg() {
     Images.src = Images[i]
-
     if (Images) {
-      Images.style.transform = 'scale(1.35)'
-
+      img_rightside.style.transform = 'scale(1.05)'
+      img_rightside.style.transition = "8s ease-in-out";
       if (i < 2) {
         i++
       } else {
         i = 0
-        Images.style.transform = 'scale(1.25)'
+        img_rightside.style.transform = 'scale(1.25)'
+        img_rightside.style.transition = "8s ease-in-out";
       }
     }
-
-    setTimeout(' ChangeImg() ', 5000)
+    setTimeout(' ChangeImg() ', 6000)
   }
 }
 
 window.onload = ChangeImg
-
-
 
 //jquery izotope
 
@@ -45,8 +43,8 @@ $(".grid").isotope({
   itemSelector: ".portfolio_list",
   layoutMode: "fitRows",
 });
-$(".list ul li").click(function () {
-  $(".list ul li").removeClass("active");
+$("#filter_cart ul li").click(function () {
+  $("#filter_cart ul li").removeClass("active");
   $(this).addClass("active");
 
   var selector = $(this).attr("data-filter");
@@ -56,7 +54,14 @@ $(".list ul li").click(function () {
   return false;
 });
 
+const list_category_click = document.querySelector('#list_category');
+const open_list_category = document.querySelector('#open_list_category');
 
+if (list_category_click) {
+  list_category_click.addEventListener('click' , ()=>{
+    open_list_category.classList.toggle('active')
+  })
+}
 
 // swiper 
 var swiper = new Swiper(".mySwiper", {
