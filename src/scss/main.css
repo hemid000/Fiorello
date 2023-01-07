@@ -1784,4 +1784,81 @@ body {
   cursor: pointer;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+#vc_column-inner {
+  font-family: "Playfair Display", serif;
+  margin-top: 100px;
+}
+#vc_column-inner .left_side {
+  padding: 43px 42px 0px 42px;
+  text-align: center;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 13px;
+}
+#vc_column-inner .left_side img {
+  width: 154px;
+  height: 154px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#vc_column-inner .header {
+  color: black;
+  text-align: inherit;
+  font-size: 41px;
+  gap: 15px;
+}
+#vc_column-inner .header h3 {
+  margin: 0px;
+  text-align: inherit;
+  font-size: 33px;
+  display: inline;
+  font-weight: 350;
+}
+#vc_column-inner .header #flowers {
+  color: red;
+  text-align: inherit;
+  font-size: 33px;
+  font-weight: 350;
+}
+#vc_column-inner h3 {
+  font-weight: 400;
+}
+#vc_column-inner p {
+  color: #999999;
+  font-size: 16px;
+}
+#vc_column-inner form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+#vc_column-inner form input {
+  width: 100%;
+  padding: 22px 21px;
+  color: #bdbdbd;
+  border: 1px solid #e1e1e1;
+  font-size: 12px;
+  outline: none;
+}
+#vc_column-inner form #write_smth {
+  padding: 10px;
+  color: #a0a0a0;
+  border: 1px solid #c6c6c6;
+  font-size: 15px;
+}
+#vc_column-inner form button {
+  width: 40%;
+  padding: 18px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  background-color: #f34f3f;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+#vc_column-inner form button:hover {
+  background-color: #ea4839;
 }/*# sourceMappingURL=main.css.map */
