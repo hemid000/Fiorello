@@ -1,95 +1,19 @@
 const bi_search = document.querySelector('.bi-search')
 const search = document.querySelector('.search')
+const home_nav_click = document.getElementById('home_nav_click');
+if (home_nav_click) {
+  home_nav_click.addEventListener('click' , ()=>{
+    home_nav_click.classList.toggle('active');
+  })
+}
 if (bi_search) {
   bi_search.addEventListener('click', e => {
     search.classList.toggle('active')
   })
 }
 
-const Images = document.querySelector('#imgs_sec')
-const img_rightside = document.querySelector('#img_rightside')
-
-Images[0] =
-  'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background.jpg'
-Images[1] =
-  'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-2.jpg'
-Images[2] =
-  'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-3.jpg'
-
-for (let i = 0; i < 3; i++) {
-  function ChangeImg() {
-    Images.src = Images[i]
-    if (Images) {
-      img_rightside.style.transform = 'scale(1.05)'
-      img_rightside.style.transition = "8s ease-in-out";
-      if (i < 2) {
-        i++
-      } else {
-        i = 0
-        img_rightside.style.transform = 'scale(1.25)'
-        img_rightside.style.transition = "8s ease-in-out";
-      }
-    }
-    setTimeout(' ChangeImg() ', 6000)
-  }
-}
-
-window.onload = ChangeImg
-
-//jquery izotope
-
-$(".grid").isotope({
-  itemSelector: ".portfolio_list",
-  layoutMode: "fitRows",
-});
-$("#filter_cart ul li").click(function () {
-  $("#filter_cart ul li").removeClass("active");
-  $(this).addClass("active");
-
-  var selector = $(this).attr("data-filter");
-  $(".grid").isotope({
-    filter: selector,
-  });
-  return false;
-});
-
-const list_category_click = document.querySelector('#list_category');
-const open_list_category = document.querySelector('#open_list_category');
-
-if (list_category_click) {
-  list_category_click.addEventListener('click' , ()=>{
-    open_list_category.classList.toggle('active')
-  })
-}
-
-// swiper 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".bi-arrow-right",
-    prevEl: ".bi-arrow-left",
-  },
-  // breakpoints: {
-
-  //   1024: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 20,
-  //   },
-  //   1600: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 20,
-  //   },
-  // },
-});
 
 // navbar scroll fixed 
-
 let navbar = document.querySelector('#nav1');
 document.addEventListener('scroll', () => {
   if (window.top.scrollY > 200) {
@@ -105,7 +29,7 @@ document.addEventListener('scroll', () => {
 
 let upbutton = document.querySelector('#scroll_topbutton');
 document.addEventListener('scroll', () => {
-  if (window.top.scrollY > 500) {
+  if (window.top.scrollY > 300) {
     upbutton.classList.add('active');
 
   }

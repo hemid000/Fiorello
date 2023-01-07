@@ -1818,11 +1818,41 @@ body {
   display: inline;
   font-weight: 350;
 }
+@media (max-width: 769px) {
+  #vc_column-inner .header h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 500px) {
+  #vc_column-inner .header h3 {
+    font-size: 20px;
+  }
+}
 #vc_column-inner .header #flowers {
   color: red;
   text-align: inherit;
   font-size: 33px;
   font-weight: 350;
+}
+@media (max-width: 769px) {
+  #vc_column-inner .header #flowers {
+    font-size: 26px;
+  }
+}
+@media (max-width: 500px) {
+  #vc_column-inner .header #flowers {
+    font-size: 21px;
+  }
+}
+@media (max-width: 769px) {
+  #vc_column-inner .header {
+    font-size: 30px;
+  }
+}
+@media (max-width: 500px) {
+  #vc_column-inner .header {
+    font-size: 25px;
+  }
 }
 #vc_column-inner h3 {
   font-weight: 400;
@@ -1830,6 +1860,16 @@ body {
 #vc_column-inner p {
   color: #999999;
   font-size: 16px;
+}
+@media (max-width: 769px) {
+  #vc_column-inner p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  #vc_column-inner p {
+    font-size: 12px;
+  }
 }
 #vc_column-inner form {
   display: flex;
@@ -1861,4 +1901,33 @@ body {
 }
 #vc_column-inner form button:hover {
   background-color: #ea4839;
+}
+@media (max-width: 500px) {
+  #vc_column-inner form button {
+    width: 46%;
+    padding: 15px;
+  }
+}
+
+#scroll_topbutton {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #f34f3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s all;
+}
+#scroll_topbutton .bi {
+  color: white;
+  font-size: 20px;
+}
+
+.active {
+  opacity: 1 !important;
+  bottom: 50px;
 }/*# sourceMappingURL=main.css.map */
