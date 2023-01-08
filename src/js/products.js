@@ -243,27 +243,27 @@ if (fifth) {
 }
 
 
-// add to cart
+//add to cart
 
-// const cart_add_hover = document.querySelectorAll('#cart_add_hover');
-// const hover_cart = document.querySelector('.hover_cart');
-// if (cart_add_hover) {
-//   for (const but of cart_add_hover)
-//     but.addEventListener('click', e => {
-//       var parent = e.target.parentNode.parentNode
-//       console.log(parent);
-//       var clone = parent.cloneNode(true)
-//       hover_cart.appendChild(clone)
-//     })
-// }
+const cart_add_hover = document.querySelectorAll('#cart_add_hover');
+const hover_cart = document.querySelector('.hover_cart');
+if (cart_add_hover) {
+  for (const but of cart_add_hover)
+    but.addEventListener('click', e => {
+      var parent = e.target.parentNode.parentNode
+      console.log(parent);
+      var clone = parent.cloneNode(true)
+      hover_cart.appendChild(clone)
+    })
+}
 
-// const add_count = document.querySelector('#add_count');
-// var count = 0;
-// if (cart_add_hover) {
-//   for (let index = 0; index < cart_add_hover.length; index++) {
-//     cart_add_hover[index].addEventListener('click', () => {
-//       // modal_side.innerHTML += `<i class="bi bi-trash" onclick = "del(this)" ></i>`
-//       add_count.innerText = count++
-//     })
-//   }
-// }
+const add_count = document.querySelector('#add_count');
+var count = 1;
+if (cart_add_hover) {
+  for (let index = 0; index < cart_add_hover.length; index++) {
+    cart_add_hover[index].addEventListener('click', () => {
+      // modal_side.innerHTML += `<i class="bi bi-trash" onclick = "del(this)" ></i>`
+      add_count.innerText = count++
+    })
+  }
+}
