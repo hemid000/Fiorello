@@ -35,7 +35,7 @@
         }
     }    
     }
-};
+}
       .info_cart{
         @include _main($display:flex , $padding:0 0 0 20px  );
         flex-direction: column;
@@ -110,6 +110,128 @@
           }
          }
       }
+      #woocommerce-Tabs-panel{
+        margin-top: 100px;
+        font-family: "Playfair Display",serif;
+        #list_choices{
+            @include _main( $margin:0px , $padding:0px , $display:flex ,);
+            list-style-type: none;
+            li{
+                list-style: none;
+                color: #696969;
+                font-size: 14px;
+                border: 1px solid #d8d8d8;
+                padding: 15px 30px 15px 30px;
+                cursor: pointer;
+            }
+            #decription{
+                color: white;
+                background: #f34f3f;
+            }
+        }
+        .describtion_filter{
+            display: block;
+            border: 1px solid #d8d8d8;
+            padding: 70px 0;
+            h2{
+                font-size: 30px;
+                    color: black;
+                    font-weight: 400;
+            }
+            p{
+                color: #565656;
+                font-size: 14px;
+                margin: 22px 0;
+            }
+        }    
+        .add_info{
+            display: none;
+            border: 1px solid #d8d8d8;
+            padding: 70px 0;
+            .first_state{
+                @include _main($display:flex , $align_it:center , $margin:20px 0);
+                flex-direction: row;
+                gap: 20px;
+                p{
+                  font-weight: 500;
+                    font-size: 14px;
+                    color: black;
+                    margin: 0;
+                }
+                span{
+                    color: #767676;
+                    font-size: 12px;
+                }
+            }
+        }
+        .reviews{
+            border: 1px solid #d8d8d8;
+            padding: 70px 0;
+            display: none;
+              .reviewers{
+                @include _main($display:flex , $width:100% , $margin:20px 0 );
+                flex-direction: row;
+                .left_side{
+                    @include _main( $width:71px );
+                    img{
+                        @include _main( $width:71px , $height: 70px , $object_f:contain );
+                    }
+                }
+                .right_side{
+                    @include _main( $width:91% , $display:flex,$padding:0 0 0 13px, $just_content:space-between);
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .up_right_side{
+                        @include _main($display:flex, $align_it:center  );
+                        flex-direction: row; 
+                        gap: 13px;     
+                        p{
+                            font-size: 12px;
+                            color: black;
+                            margin: 0;
+                        }
+                        span{
+                            font-size: 10px;
+                            color: #a1a1a1;
+                        }
+                    }
+                    .down_right_side{
+                        p{
+                            font-size: 14px;
+                            color: black;
+                        }
+                    }
+                }
+              }
+              #review_write{
+                width: 100%;
+                margin-top: 10px;
+                border: 1px solid #eaeaea;
+                padding: 10px;
+              }
+              label{
+                margin: 18px 0 5px 0;         
+                 }
+              input{
+                width: 100%;
+                padding: 14px;
+                border: 1px solid #eaeaea;
+                &:focus{
+                    border: 1px solid black;
+                }
+              }
+              #sub_btn{
+                width: 15%;
+                margin-top: 30px;
+                background-color: #f34f3f;
+                color: white;
+                outline: none;
+                padding: 15px;
+                border: 1px solid transparent;
+              }
+        }
+    }
       #scroll_topbutton{
         width: 50px;
         height: 50px;
@@ -131,3 +253,5 @@
        opacity: 1 !important;
       bottom: 50px;
     }
+
+ 

@@ -1981,6 +1981,139 @@ body {
   line-height: 32px;
 }
 
+#woocommerce-Tabs-panel {
+  margin-top: 100px;
+  font-family: "Playfair Display", serif;
+}
+#woocommerce-Tabs-panel #list_choices {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  list-style-type: none;
+}
+#woocommerce-Tabs-panel #list_choices li {
+  list-style: none;
+  color: #696969;
+  font-size: 14px;
+  border: 1px solid #d8d8d8;
+  padding: 15px 30px 15px 30px;
+  cursor: pointer;
+}
+#woocommerce-Tabs-panel #list_choices #decription {
+  color: white;
+  background: #f34f3f;
+}
+#woocommerce-Tabs-panel .describtion_filter {
+  display: block;
+  border: 1px solid #d8d8d8;
+  padding: 70px 0;
+}
+#woocommerce-Tabs-panel .describtion_filter h2 {
+  font-size: 30px;
+  color: black;
+  font-weight: 400;
+}
+#woocommerce-Tabs-panel .describtion_filter p {
+  color: #565656;
+  font-size: 14px;
+  margin: 22px 0;
+}
+#woocommerce-Tabs-panel .add_info {
+  display: none;
+  border: 1px solid #d8d8d8;
+  padding: 70px 0;
+}
+#woocommerce-Tabs-panel .add_info .first_state {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+#woocommerce-Tabs-panel .add_info .first_state p {
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+  margin: 0;
+}
+#woocommerce-Tabs-panel .add_info .first_state span {
+  color: #767676;
+  font-size: 12px;
+}
+#woocommerce-Tabs-panel .reviews {
+  border: 1px solid #d8d8d8;
+  padding: 70px 0;
+  display: none;
+}
+#woocommerce-Tabs-panel .reviews .reviewers {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+}
+#woocommerce-Tabs-panel .reviews .reviewers .left_side {
+  width: 71px;
+}
+#woocommerce-Tabs-panel .reviews .reviewers .left_side img {
+  width: 71px;
+  height: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#woocommerce-Tabs-panel .reviews .reviewers .right_side {
+  width: 91%;
+  padding: 0 0 0 13px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+#woocommerce-Tabs-panel .reviews .reviewers .right_side .up_right_side {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 13px;
+}
+#woocommerce-Tabs-panel .reviews .reviewers .right_side .up_right_side p {
+  font-size: 12px;
+  color: black;
+  margin: 0;
+}
+#woocommerce-Tabs-panel .reviews .reviewers .right_side .up_right_side span {
+  font-size: 10px;
+  color: #a1a1a1;
+}
+#woocommerce-Tabs-panel .reviews .reviewers .right_side .down_right_side p {
+  font-size: 14px;
+  color: black;
+}
+#woocommerce-Tabs-panel .reviews #review_write {
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #eaeaea;
+  padding: 10px;
+}
+#woocommerce-Tabs-panel .reviews label {
+  margin: 18px 0 5px 0;
+}
+#woocommerce-Tabs-panel .reviews input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #eaeaea;
+}
+#woocommerce-Tabs-panel .reviews input:focus {
+  border: 1px solid black;
+}
+#woocommerce-Tabs-panel .reviews #sub_btn {
+  width: 15%;
+  margin-top: 30px;
+  background-color: #f34f3f;
+  color: white;
+  outline: none;
+  padding: 15px;
+  border: 1px solid transparent;
+}
+
 #scroll_topbutton {
   width: 50px;
   height: 50px;

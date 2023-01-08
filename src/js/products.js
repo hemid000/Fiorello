@@ -124,6 +124,59 @@ if (minus) {
   }
 }
 
+// filter cart-info
+
+const decription = document.querySelector('#decription')
+const describtion_filter = document.querySelector('.describtion_filter')
+
+const list_color = document.querySelector('.list_color')
+
+if (decription) {
+  decription.addEventListener('click', () => {
+    decription.style.background = '#f34f3f'
+    decription.style.color = 'white'
+    additional_info.style.background = 'white'
+    additional_info.style.color = '#696969'
+    review_info.style.background = 'white'
+    review_info.style.color = '#696969'
+    describtion_filter.style.display = 'block'
+    add_info.style.display = 'none'
+    reviews.style.display = 'none'
+  })
+}
+const additional_info = document.querySelector('#additional_info')
+const add_info = document.querySelector('.add_info')
+
+if (additional_info) {
+  additional_info.addEventListener('click', () => {
+    review_info.style.background = 'white'
+    review_info.style.color = '#696969'
+    additional_info.style.background = '#f34f3f'
+    additional_info.style.color = 'white'
+    decription.style.background = 'white'
+    decription.style.color = '#696969'
+    add_info.style.display = 'block'
+    describtion_filter.style.display = 'none'
+    reviews.style.display = 'none'
+  })
+}
+
+const review_info = document.querySelector('#review_info')
+const reviews = document.querySelector('.reviews')
+if (review_info) {
+  review_info.addEventListener('click', () => {
+    decription.style.background = 'white'
+    decription.style.color = '#696969'
+    additional_info.style.background = 'white'
+    additional_info.style.color = '#696969'
+    review_info.style.background = '#f34f3f'
+    review_info.style.color = 'white'
+
+    add_info.style.display = 'none'
+    describtion_filter.style.display = 'none'
+    reviews.style.display = 'block'
+  })
+}
 // add to cart
 
 // const cart_add_hover = document.querySelectorAll('#cart_add_hover');
