@@ -13,7 +13,8 @@
       "default",
       {
         "button-name": "off",
-        "link-name": "off"
+        "link-name": "off",
+        "input-button-name": "off"
       }
     ],
     "button-type": "off",
@@ -38,6 +39,12 @@
       "default",
       {
         "duplicate-id": "off"
+      }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
       }
     ]
   }

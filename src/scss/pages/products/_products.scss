@@ -1,0 +1,133 @@
+#product_list{
+    background-color: #fafaf9;
+    padding: 83px 46px;
+    font-family: "Playfair Display",serif;
+    h2{
+        @include _main($color:black , $font_s:38px );
+        font-weight: 400;
+    }
+    p{
+        @include _main($color:#a1a1a1 , $font_s:17px , $padding:0px , $margin:20px 0px);
+    }
+}
+#mkdf-container-inner-info{
+    margin-top: 90px;
+    font-family: "Playfair Display",serif;
+    .imgs{
+        @include _main($display:flex , $width:100% );
+        flex-direction: row;
+  
+        .left_side{
+       width: 20%;
+        @include _main($display:flex , $align_it:center , $margin:0 30px 0 0 );
+        flex-direction: column;
+        gap: 20px;
+        img{
+            @include _main($width:118px ,$cursor:pointer , $height:145px , $object_f:cover );
+        }
+        
+    }
+    .right_side{
+         width: 80%;
+        img{
+            @include _main( $height:640px ,$cursor:pointer ,  $object_f:cover );
+          width: 100%;
+        }
+    }    
+    }
+};
+      .info_cart{
+        @include _main($display:flex , $padding:0 0 0 20px  );
+        flex-direction: column;
+        gap: 22px;
+         .head_line_info{
+            h3{
+                margin: 5px 0;
+            }
+            span{
+                color: #a1a1a1;
+            }
+         }
+         .info_add{
+            @include _main($display:flex);
+            flex-direction: column;
+            gap: 15px;
+            p{
+                color: #767676;
+                font-size: 14px;
+            }
+            form{
+                @include _main($display:flex );
+                flex-direction: row;
+                
+            #quantity{
+                width: 36%;
+                outline: none;
+                padding: 12px;
+                font-size: 12px;
+                border: 1px solid #eaeaea;
+            }
+            #minus{
+                @include _main($border:1px solid transparent ,$color:black , $display:flex , $align_it:center , $just_content:center , $width:4%, $padding:12px );
+                outline: none;
+            }
+            #plus{
+                @include _main($border:1px solid transparent ,$color:black , $display:flex , $align_it:center , $just_content:center , $width:4%, $padding:12px );
+                outline: none;
+            }
+            #text_pm{
+                width: 10%;
+                outline: none;
+                padding: 12px;
+                text-align: center;
+                border: 1px solid #eaeaea; 
+            }
+            #add_car_info{
+                border: 1px solid black;
+                background-color: black;
+                color: white;
+                width: 37%;
+                transition: .3s ease-in-out;
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.851);
+                }
+            }
+        }
+         }
+         .list_about{
+            @include _main($display:flex , );
+            flex-direction: column;
+            gap: 17px;
+            ul{
+                @include _main( $margin:0px , $padding:0px);
+                list-style-type: none;
+                li{
+                    list-style: none;
+                    color: #696969;
+                    font-size: 12px;
+                    line-height: 32px;
+                }
+          }
+         }
+      }
+      #scroll_topbutton{
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        background-color: #f34f3f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: .5s all;
+        .bi{
+            color: white;
+            font-size: 20px;
+        }
+    }
+    .active {
+       opacity: 1 !important;
+      bottom: 50px;
+    }
