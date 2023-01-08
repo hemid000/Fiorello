@@ -16,7 +16,6 @@
     .imgs{
         @include _main($display:flex , $width:100% );
         flex-direction: row;
-  
         .left_side{
        width: 20%;
         @include _main($display:flex , $align_it:center , $margin:0 30px 0 0 );
@@ -25,7 +24,6 @@
         img{
             @include _main($width:118px ,$cursor:pointer , $height:145px , $object_f:cover );
         }
-        
     }
     .right_side{
          width: 80%;
@@ -34,6 +32,35 @@
           width: 100%;
         }
     }    
+    }
+    .modal_zoom_img{
+            @include _main($width:100% , $display:flex , $align_it:center , $just_content:center , $height:100% , $back-color:rgba(0, 0, 0, 0.423) , $position:fixed ,$top:0px ,  $left:0px , $right:0px );
+         z-index: 8279;
+         visibility: hidden;  
+    }
+    .modal_zoom_img2{
+            @include _main($width:100% , $display:flex , $align_it:center , $just_content:center , $height:100% ,$back-color:rgba(0, 0, 0, 0.423)  , $position:fixed ,$top:0px ,  $left:0px , $right:0px );
+         z-index: 8279;
+            visibility: hidden; 
+    }
+    .modal_zoom_img3{
+            @include _main($width:100% , $display:flex , $align_it:center , $just_content:center , $height:100% ,$back-color:rgba(0, 0, 0, 0.423)  , $position:fixed ,$top:0px ,  $left:0px , $right:0px );
+         z-index: 8279;
+            visibility: hidden; 
+    }
+    .modal_zoom_img4{
+            @include _main($width:100% , $display:flex , $align_it:center , $just_content:center , $height:100% ,$back-color:rgba(0, 0, 0, 0.423)  , $position:fixed ,$top:0px ,  $left:0px , $right:0px );
+         z-index: 8279;
+            visibility: hidden; 
+
+    }
+    .modal_zoom_img5{
+            @include _main($width:100% , $display:flex , $align_it:center , $just_content:center , $height:100% ,$back-color:rgba(0, 0, 0, 0.423)  , $position:fixed ,$top:0px ,  $left:0px , $right:0px );
+         z-index: 8279;
+            visibility: hidden; 
+            img{
+                height: 70%;
+            }
     }
 }
       .info_cart{

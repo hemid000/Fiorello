@@ -177,6 +177,72 @@ if (review_info) {
     reviews.style.display = 'block'
   })
 }
+
+// img click
+const first = document.querySelector('#first')
+const modal_zoom_img = document.querySelector('.modal_zoom_img')
+const second = document.querySelector('#second')
+const modal_zoom_img2 = document.querySelector('.modal_zoom_img2')
+const third = document.querySelector('#third')
+const modal_zoom_img3 = document.querySelector('.modal_zoom_img3')
+const fifth = document.querySelector('#fifth')
+const modal_zoom_img4= document.querySelector('.modal_zoom_img4')
+const fourth = document.querySelector('#fourth')
+const modal_zoom_img5 = document.querySelector('.modal_zoom_img5')
+
+
+if (first) {
+  first.addEventListener('click' , ()=>{
+    modal_zoom_img.style.visibility = 'visible';
+    window.onclick = function (event) {
+      if (event.target == modal_zoom_img) {
+        modal_zoom_img.style.visibility = "hidden";
+      }
+  }
+  })
+}
+if (second) {
+  second.addEventListener('click' , ()=>{
+    modal_zoom_img2.style.visibility = 'visible';
+    window.onclick = function (event) {
+      if (event.target == modal_zoom_img2) {
+        modal_zoom_img2.style.visibility = "hidden";
+      }
+  }
+  })
+}
+if (third) {
+  third.addEventListener('click' , ()=>{
+    modal_zoom_img3.style.visibility = 'visible';
+    window.onclick = function (event) {
+      if (event.target == modal_zoom_img3) {
+        modal_zoom_img3.style.visibility = "hidden";
+      }
+  }
+  })
+}
+if (fourth) {
+  fourth.addEventListener('click' , ()=>{
+    modal_zoom_img4.style.visibility = 'visible';
+    window.onclick = function (event) {
+      if (event.target == modal_zoom_img4) {
+        modal_zoom_img4.style.visibility = "hidden";
+      }
+  }
+  })
+}
+if (fifth) {
+  fifth.addEventListener('click' , ()=>{
+    modal_zoom_img5.style.visibility = 'visible';
+    window.onclick = function (event) {
+      if (event.target == modal_zoom_img5) {
+        modal_zoom_img5.style.visibility = "hidden";
+      }
+  }
+  })
+}
+
+
 // add to cart
 
 // const cart_add_hover = document.querySelectorAll('#cart_add_hover');
