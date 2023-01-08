@@ -1,5 +1,11 @@
 const bi_search = document.querySelector('.bi-search')
 const search = document.querySelector('.search')
+const home_nav_click = document.getElementById('home_nav_click');
+if (home_nav_click) {
+  home_nav_click.addEventListener('click' , ()=>{
+    home_nav_click.classList.toggle('active');
+  })
+}
 if (bi_search) {
   bi_search.addEventListener('click', e => {
     search.classList.toggle('active')
