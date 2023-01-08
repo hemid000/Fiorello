@@ -562,16 +562,73 @@
 }
 #nav1 .rightside #cart_add {
   margin: 0px 0px 0px 20px;
+  padding: 44px 0;
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 13px;
   font-weight: 500;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 #nav1 .rightside #cart_add p {
   margin: 0px;
   padding: 0px;
   font-size: 14px;
+}
+#nav1 .rightside #cart_add .hover_cart {
+  width: 300px;
+  height: 0px;
+  position: absolute;
+  top: 113px;
+  cursor: pointer;
+  background-color: #fff;
+  right: -22px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  overflow-y: scroll;
+  transition: 0.3s ease-in-out;
+  gap: 10px;
+  /* width */
+}
+#nav1 .rightside #cart_add .hover_cart .portfolio_list {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: static !important;
+  width: 100%;
+}
+#nav1 .rightside #cart_add .hover_cart .portfolio_list img {
+  width: 50px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#nav1 .rightside #cart_add .hover_cart .portfolio_list span {
+  display: none;
+}
+#nav1 .rightside #cart_add ::-webkit-scrollbar {
+  width: 4px;
+}
+#nav1 .rightside #cart_add ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#nav1 .rightside #cart_add ::-webkit-scrollbar-thumb {
+  background: rgb(132, 130, 130);
+}
+#nav1 .rightside #cart_add ::-webkit-scrollbar-thumb:hover {
+  background: rgb(155, 152, 152);
+}
+#nav1 .rightside #cart_add:hover .hover_cart {
+  opacity: 1;
+  height: 500px;
+  overflow-y: scroll;
 }
 @media (max-width: 1000px) {
   #nav1 {
