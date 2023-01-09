@@ -1841,4 +1841,44 @@ body {
   cursor: pointer;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+#wpb-inspiration {
+  background-color: #fafaf9;
+  padding: 70px 0;
+  font-family: "Playfair Display", serif;
+}
+#wpb-inspiration h2 {
+  font-size: 36px;
+}
+#wpb-inspiration p {
+  font-size: 16px;
+  color: #777777;
+  font-size: 16px;
+}
+
+#categories_cartbysort {
+  margin-top: 100px;
+}
+#categories_cartbysort .categories {
+  width: 100%;
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+}
+#categories_cartbysort .categories ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#categories_cartbysort .categories ul li {
+  cursor: pointer;
+  list-style: none;
+  color: #828282;
+  font-size: 14px;
+  line-height: 28px;
+  transition: 0.3s ease-in-out;
+}
+#categories_cartbysort .categories ul li:hover {
+  color: red;
 }/*# sourceMappingURL=main.css.map */

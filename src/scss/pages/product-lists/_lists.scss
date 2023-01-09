@@ -1,0 +1,38 @@
+#wpb-inspiration{
+    background-color: #fafaf9;
+    padding: 70px 0;
+    font-family: "Playfair Display",serif;
+    h2{
+        font-size: 36px;
+    }
+    p{
+        font-size: 16px;
+        @include _main($font_s:16px  , $color:#777777)
+    }
+}
+
+#categories_cartbysort{
+    margin-top: 100px;
+    .categories{
+        @include _main($display:flex , $just_content:baseline , $width:100%);
+        flex-direction: column;
+        ul{
+            @include _main($margin:0 , $padding:0 );
+            list-style-type: none;
+
+            li{
+                cursor: pointer;
+                list-style: none;
+                color: #828282;
+                font-size: 14px;
+                line-height: 28px;
+                transition: .3s ease-in-out;
+
+                &:hover{
+                    color: red;
+                }
+            }
+   
+        }
+    }
+}
