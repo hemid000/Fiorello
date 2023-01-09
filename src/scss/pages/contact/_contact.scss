@@ -1,0 +1,99 @@
+#vc_column-inner{
+    font-family: "Playfair Display",serif ;
+    margin-top: 100px;
+    .left_side{
+        @include _main($padding: 43px 42px 0px 42px , $back-color:#f6f6f6, $display:flex , $align_it:center , $text-align:center);
+        flex-direction: column;
+        gap: 13px;
+        img{
+            @include _main($width:154px , $height:154px , $object_f:contain);
+        }
+    }
+    .header{
+        @include _main(  $color:black , $text-align:inherit , $font_s:41px , );
+         gap: 15px;
+       h3{
+           @include _main($display:inline ,  $text-align:inherit , $font_s:33px , $margin:0px);
+          font-weight: 350;  
+   @media (max-width:769px) {
+    font-size: 26px;
+   }
+   @media (max-width:500px) {
+    font-size: 20px;
+   }
+        }
+#flowers{
+    @include _main($color:red , $text-align:inherit , $font_s:33px);
+    font-weight: 350;   
+    @media (max-width:769px) {
+        font-size: 26px;
+       }
+    @media (max-width:500px) {
+        font-size: 21px;
+       }
+}  
+     @media (max-width:769px) {
+         font-size: 30px;
+      }
+     @media (max-width:500px) {
+         font-size: 25px;
+      }
+    }
+    h3{
+        font-weight: 400;
+    }
+    p{
+        @include _main($color:#999999 , $font_s:16px);
+        @media (max-width:769px) {
+            font-size: 15px;
+         }
+        @media (max-width:500px) {
+            font-size: 12px;
+         }
+    }
+ form{
+    @include _main($display:flex , );
+    flex-direction: column;
+    gap: 14px;
+        input{ 
+        @include _main($font_s:12px , $color:#bdbdbd ,  $width:100% , $border:1px solid #e1e1e1 , $padding:22px 21px);
+        outline: none;
+    }
+    #write_smth{
+        @include _main($font_s:15px , $color:#a0a0a0 , $border:1px solid #c6c6c6 , $padding:10px);
+    }
+    button{
+        @include _main($back-color:#f34f3f , $color:#ffffff ,  $width:40% , $border:1px solid transparent , $padding:18px);
+        outline: none;
+        transition: .3s ease-in-out;
+        &:hover{
+            background-color: #ea4839;
+        }
+        @media (max-width:500px) {
+            width: 46%;
+            padding: 15px;
+        }
+    }
+ }
+}
+#scroll_topbutton{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #f34f3f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s all;
+    .bi{
+        color: white;
+        font-size: 20px;
+    }
+}
+.active {
+   opacity: 1 !important;
+  bottom: 50px;
+}
