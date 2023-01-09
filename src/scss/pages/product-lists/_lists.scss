@@ -1,0 +1,155 @@
+#wpb-inspiration{
+    background-color: #fafaf9;
+    padding: 70px 0;
+    font-family: "Playfair Display",serif;
+    h2{
+        font-size: 36px;
+        @media (max-width:700px) {
+            font-size: 30px;
+            
+        }
+        @media (max-width:400px) {
+            font-size: 26px;
+            
+        }
+    }
+    p{
+        font-size: 16px;
+        @include _main($font_s:16px  , $color:#777777);
+        @media (max-width:700px) {
+            font-size: 14px;
+            
+        }
+        @media (max-width:400px) {
+            font-size: 12px;
+            
+        }
+    }
+}
+
+#categories_cartbysort{
+    margin-top: 100px;
+    .categories{
+        @include _main($display:flex , $just_content:baseline , $width:100%);
+        flex-direction: column;
+        ul{
+            @include _main($margin:0 , $padding:0 );
+            list-style-type: none;
+
+            li{
+                cursor: pointer;
+                list-style: none;
+                color: #828282;
+                font-size: 14px;
+                line-height: 28px;
+                transition: .3s ease-in-out;
+
+                &:hover{
+                    color: red;
+                }
+            }
+   
+        }
+    }
+    .list{
+        ul{
+            @include _main($display:flex , $color: $fourth_color , $margin:0px , $padding:0px) ;
+            flex-direction: row;
+            gap: 20px;
+            list-style-type: none;
+            li{
+                list-style: none;
+                cursor: pointer;
+        }
+        .active{
+            color: red;
+        }
+    }
+    @media (max-width:769px) {
+        display: none;
+    }
+    }
+    .list2{
+        display: none;
+        #list_category{
+            color: black;
+        }
+        #open_list_category{
+            @include _main($display:flex , $color: $fourth_color , $margin:10px , $padding:0px , $height:0px) ;
+            overflow: hidden;
+            opacity: 0;
+            flex-direction: column;
+            gap: 10px;
+            list-style-type: none;
+            transition: .4s ease-in-out;
+            li{
+                list-style: none;
+                cursor: pointer;
+        }
+          .active{
+            color: red;
+          }
+        }
+    .active{
+ opacity: 1 !important;
+ height: 230px !important;
+    }
+        @media (max-width:769px) {
+            display: block;
+            
+        }
+    }
+.grid{
+    overflow: visible;
+    margin-top: 50px;
+    width: 100%;
+    .portfolio_list{
+        position: relative ;
+      
+        width: 300px;
+        margin: 5px 0;
+        padding: 10px 0;
+        color: #262524;
+
+        @include _main($display:flex , $align_it:center );
+        gap: 10px;
+        flex-direction: column; 
+       
+           img{
+            transition: .2s ease-in-out;
+        @include _main($cursor:pointer , $width:85% , $height:85% , $object_f:cover);
+        &:hover{
+            transform: scale(1.027);
+        }
+    }
+    p{
+        font-size: 13px;
+        color: black;
+        margin: 0;
+    }
+.add_cart_{
+    position: relative;
+       overflow: hidden;
+       width: 40%;
+       text-align: center; 
+      font-size: 12px;
+        color: #acacac; 
+       #hover_right{
+        @include _main(  $color: #acacac , $margin:0px , $font_s:12px );
+        transition: .2s ease-in-out;
+    }
+    #cart_add_hover{
+        @include _main($position:absolute , $top:0px , $left:0px , $cursor:pointer);
+        transform: translateX(-69px);
+        transition: .2s ease-in-out;
+    }
+}
+       &:hover #hover_right{
+          transform: translateX(190px);
+       }
+       &:hover #cart_add_hover{
+        transform: translateX(23px);
+       }
+       }
+}  
+}

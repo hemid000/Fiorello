@@ -1,0 +1,662 @@
+#nav1 {
+    position: relative;
+    z-index: 10;
+    .img{
+        @include _main($height:115px , $width:100% , $display:flex , $align_it:center);
+        img{
+            @include _main($height:25px , $width:100% , $object_f:contain , $cursor:pointer);
+        }
+    }
+    .rightside{
+        @include _main( $display:flex , $align_it:center , $height:100% , $just_content:end);
+   ul{
+        @include _main( $display:flex , $align_it:center , $margin:0px , $padding:0px);
+        flex-direction: row;
+        gap: 35px;
+        list-style-type: none;
+        li{
+            list-style: none;
+            margin-right: 20px;
+            a{
+                @include _main($position:relative , $f_size:14px , $color:#1b1b1b , $padding:45px 3px);
+                text-decoration: none;
+                display: block;  
+                &::before{
+                @include _main($position:absolute , $top:65px , $left:0px , $back-color:black , $width:0% , $height:1px);
+                content: '';
+                transition: .3s ease-in-out;
+                }   
+                &:hover{
+                    &::before{
+                        @include _main($position:absolute , $top:65px , $left:0px , $back-color:black , $width:100% , $height:1px);
+                        content: '';
+                        }   
+                }      
+            }      
+        }
+        #search_click{ 
+            position: relative;
+            cursor: pointer;
+            &:hover{
+                color: red;
+            }
+            .search{    
+                transition: .3s all;
+                 overflow: hidden;
+                display: none;
+                @include _main($position:absolute , $height:0px , $top:67px , $left:-273px , $display:flex , $width:300px);
+                form{
+                    @include _main($display:flex , $align_it:center , $width:292px);
+                      input{
+                    @include _main($width:120%, $padding: 12px, $border:1px solid transparent , $back-color:$main_color);
+                    outline: none;
+                    font-size: 14px;
+                }
+                button{
+                    @include _main($margin: 0 0 0 -5px ,$padding: 12px, $border:1px solid transparent , $back-color:$main_color);
+                    outline: none;
+                    font-size: 14px;      
+                }  
+                }
+            }
+         .active {
+                    overflow: hidden;
+                    display: block;
+                    height: 60px;
+                }
+        }   
+        #home{
+            position: relative; 
+            a{
+             color: black;
+            }
+            .active{
+                bottom: 0 !important;
+                &::before{
+                    @include _main($position:absolute , $top:64px , $left:0px , $back-color:black , $width:100% , $height:1px);
+                    content: '';
+                    }   
+            }
+            #home_hover{
+                overflow: hidden;
+                opacity: 0;
+                transition: .3s ease-in-out;
+                @include _main( $height:0px , $back-color:white , $width:448% ,  $position:absolute , $top:113px , $left:-25px ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+                list-style-type: none;
+                ul{
+                    @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 37px 10px 30px 20px );
+                    flex-direction: column;
+                    gap: 15px;
+                    list-style-type: none; 
+                    li{
+                        a{
+                            @include _main($position:relative , $f_size:14px , $color:#1b1b1b , $padding:3px);
+                            text-decoration: none;
+                            display: block;  
+                            &::before{
+                            @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:0% , $height:1px);
+                            content: '';
+                            transition: .3s ease-in-out;
+                            }   
+                            &:hover{
+                                &::before{
+                                    @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:100% , $height:1px);
+                                    content: '';
+                                    }   
+                            }
+                        }      
+                    }
+                }
+            }
+        &:hover #home_hover{
+            @include _main($height:300px , $back-color:white );
+            overflow: hidden;
+            opacity: 1;
+        }
+        }
+        #pages{
+            position: relative; 
+            #home_hover{
+                overflow: hidden;
+                opacity: 0;
+                transition: .3s ease-in-out;
+                @include _main($height:0px , $back-color:white, $width:448%, $position:absolute , $top:113px , $left:-25px ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+                list-style-type: none;
+                ul{
+                    @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 37px 10px 30px 20px );
+                    flex-direction: column;
+                    gap: 15px;
+                    list-style-type: none; 
+                    li{
+                        cursor: pointer;
+                        a{
+                            @include _main($position:relative , $f_size:14px , $color:#1b1b1b , $padding:3px);
+                            text-decoration: none;
+                            display: block;  
+                            &::before{
+                            @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:0% , $height:1px);
+                            content: '';
+                            transition: .3s ease-in-out;
+                            }   
+                            &:hover{
+                                &::before{
+                                    @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:100% , $height:1px);
+                                    content: '';
+                                    }   
+                            }
+                        }      
+                    }
+                }
+            }
+        &:hover #home_hover{
+            overflow: hidden;
+            opacity: 1;
+            @include _main($height:130px , $back-color:white);
+        }
+        }
+        #shop{
+            position: relative; 
+            #home_hover{
+                overflow: hidden;
+                opacity: 0;
+                transition: .3s ease-in-out;
+                @include _main($height:0px , $back-color:white , $width:1255px , $position:absolute , $top:113px , $left:-673px ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+                list-style-type: none;
+                ul{
+                    @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 37px 10px 30px 20px );
+                    flex-direction: column;
+                    gap: 15px;
+                    list-style-type: none; 
+                    li{
+                        line-height: 25px;
+                        cursor: pointer;
+                        a{
+                            @include _main($position:relative , $f_size:14px , $color:#1b1b1b , $padding:3px);
+                            text-decoration: none;
+                            display: block;  
+                            &::before{
+                            @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:0% , $height:1px);
+                            content: '';
+                            transition: .3s ease-in-out;
+                            }   
+                    
+                        }    
+                        &:hover a{
+                            &::before{
+                                @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:100% , $height:1px);
+                                content: '';
+                                }   
+                        }  
+                    }
+                }
+            }
+        &:hover #home_hover{
+            overflow: hidden;
+            opacity: 1;
+            @include _main($height:450px , $back-color:white );
+        }
+        p{
+            @include _main($font_s:16px , $color:$fourth_color, $margin:10px 0 , $text-align:center);
+            font-weight: 600;
+        }
+        }
+        #portfolio{
+            position: relative; 
+            #home_hover{
+                overflow: hidden;
+                opacity: 0;
+                transition: .3s ease-in-out;
+                @include _main($height:0px , $back-color:white, $width:258%, $position:absolute , $top:113px , $left:-25px ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+                list-style-type: none;
+                ul{
+                    @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 37px 10px 30px 20px );
+                    flex-direction: column;
+                    gap: 15px;
+                    list-style-type: none; 
+                    li{   
+                        cursor: pointer;
+                        a{
+                            @include _main($position:relative , $f_size:14px , $color:#1b1b1b , $padding:3px);
+                            text-decoration: none;
+                            display: block;  
+                            &::before{
+                            @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:0% , $height:1px);
+                            content: '';
+                            transition: .3s ease-in-out;
+                            }   
+      
+                        }   
+                        &:hover a{
+                            &::before{
+                                @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:100% , $height:1px);
+                                content: '';
+                                }   
+                        }   
+                    }
+                    #port_lay{
+                        @include _main($position:relative , $display:flex , $align_it:center , $just_content:space-between , $width:100%);
+                        .bi-chevron-right{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        &:hover #home_hover{
+          overflow: hidden;
+            opacity: 1;
+            @include _main($height:230px , $back-color:white);
+        }
+    }
+    #blog{
+        position: relative; 
+        #home_hover{
+            overflow: hidden;
+            opacity: 0;
+            transition: .3s ease-in-out;
+            @include _main($height:0px , $back-color:white, $width:420%, $position:absolute , $top:113px , $left:-25px ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+            list-style-type: none;
+            ul{
+                @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 37px 10px 30px 20px );
+                flex-direction: column;
+                gap: 15px;
+                list-style-type: none; 
+                li{   
+                    cursor: pointer;
+                    a{
+                        @include _main($position:relative , $f_size:14px , $color:#1b1b1b , $padding:3px);
+                        text-decoration: none;
+                        display: block;  
+                        &::before{
+                        @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:0% , $height:1px);
+                        content: '';
+                        transition: .3s ease-in-out;
+                        }   
+                   
+                    } 
+                    &:hover a{
+                        &::before{
+                            @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:100% , $height:1px);
+                            content: '';
+                            }   
+                    }     
+                }
+                #port_lay{
+                    @include _main($position:relative , $display:flex , $align_it:center , $just_content:space-between , $width:100%);
+                    .bi-chevron-right{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    &:hover #home_hover{
+      overflow: hidden;
+        opacity: 1;
+        @include _main($height:130px , $back-color:white);
+    }
+}
+        #elements{
+            position: relative; 
+            #home_hover{
+                overflow: hidden;
+                opacity: 0;
+                transition: .3s ease-in-out;
+                @include _main($height:0px , $back-color:white, $width:258%, $position:absolute , $top:113px , $left:-25px ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+                list-style-type: none;
+                ul{
+                    @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 37px 10px 30px 20px );
+                    flex-direction: column;
+                    gap: 15px;
+                    list-style-type: none; 
+                    li{  
+                        cursor: pointer; 
+                        a{
+                            @include _main($position:relative , $f_size:14px , $color:#1b1b1b , $padding:3px);
+                            text-decoration: none;
+                            display: block;  
+                            &::before{
+                            @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:0% , $height:1px);
+                            content: '';
+                            transition: .3s ease-in-out;
+                            }   
+                        }  
+                        &:hover a{
+                            &::before{
+                                @include _main($position:absolute , $top:22px , $left:0px , $back-color:black , $width:100% , $height:1px);
+                                content: '';
+                                }   
+                        }    
+                    }
+                    #port_lay{
+                        @include _main($position:relative , $display:flex , $align_it:center , $just_content:space-between , $width:100%);
+                        .bi-chevron-left{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        &:hover #home_hover{
+          overflow: hidden;
+            opacity: 1;
+            @include _main($height:178px , $back-color:white);
+        }
+    }
+    @media (max-width:1200px) {
+        gap: 10px;
+    }
+    }   
+     #cart_add{
+        @include _main( $display:flex , $align_it:center , $cursor:pointer , $margin:0px 0px 0px 20px , $padding:44px 0 ,$position:relative );
+        gap: 13px;
+         font-weight: 500;  
+
+        p{
+            @include _main($margin:0px , $padding:0px , $font_s:14px);
+        }
+        
+        .hover_cart{
+            @include _main( $width:300px , $top:113px , $right:-22px ,$height:0px , $back-color:$main_color ,$display:flex , $align_it:center , $cursor:pointer , $position:absolute);
+            flex-direction: column;   
+            opacity: 0;
+            overflow-y: scroll;
+            transition: .3s ease-in-out;
+            gap: 10px;
+            /* width */
+
+          .portfolio_list{
+            @include _main( $display:flex , $align_it:center , $cursor:pointer , $just_content:space-between );
+            flex-direction: row;
+            position: static !important; 
+            width: 100%;
+          img{
+            width: 50px;
+            height: 60px;
+            object-fit: cover;
+          }
+          span{
+            display: none;
+          }
+          }
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+          }
+          
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: rgb(132, 130, 130);
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: rgb(155, 152, 152);
+          }
+          &:hover .hover_cart{
+            opacity: 1;
+            height: 500px;
+            overflow-y: scroll;
+          }
+    }
+}
+@media (max-width:1000px) {
+    display: none;
+}
+}
+.scroll{
+    background-color: white;
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    top: -100px;
+    animation: fadedown .8s ease forwards;
+    #cart_add{
+        display: none !important;
+    }
+    .bi-search{
+        display: none;
+    }
+}
+@keyframes fadedown {
+    0%{
+        top: -200px;
+    }
+   100%{
+        top: 0px;
+    }
+}
+#nav2{
+    display: none;
+    .img{
+        @include _main($height:115px , $width:100% , $display:flex , $align_it:center);
+        img{
+            @include _main($height:25px , $width:100% , $object_f:contain , $cursor:pointer);
+        }
+    }
+    .right_side{
+        @include _main($height:100% , $display:flex , $just_content:end , $align_it:center);
+        padding-right: 10px;
+    .bi{
+        font-size: 23px;
+        cursor:  pointer;
+    }
+    }
+    #nav_menu_click{
+        display: none;
+        z-index: 12982;
+        @include _main($width:100% ,  $position:fixed , $top:0px , $right:0px , $height:100%); 
+         overflow-y: auto;
+        .right_nav{
+            @include _main($width:420px , $position:absolute , $top:0px , $right:0px , $back-color:$main_color , $padding:56px 51px 80px 75px,);
+            overflow: hidden;
+            max-width: 100%;
+            z-index: 9999;
+          .close_nav_list{
+                @include _main($width:100% , $display:flex , $just_content:end , $margin:14px 0 25px 0);
+            }
+            ul{
+                @include _main( $display:flex ,  $margin:0px , $padding:0px ,);
+                flex-direction: column;
+                
+                list-style-type: none;
+                li{
+                    @include _main( $display:flex ,);
+                    flex-direction: column;
+                    list-style: none;
+                    line-height: 43px;
+                    gap: 6px;
+                 .bi{
+                    font-size: 10px;
+                    color: #3c3c3c;
+                    
+                 }
+                    a{
+                        @include _main($position:relative , $f_size:14px , $color:#3c3c3c);
+                        text-decoration: none;
+                        display: block;  
+        }}}
+        #home_click{
+            position: relative;
+             #nav_home_click{
+            opacity: 0;
+            overflow: hidden;
+            transition: .4s ease-in-out;
+            @include _main($height:0px , $back-color:white ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+            list-style-type: none;
+            ul{
+                @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 0px );
+                flex-direction: column;
+                
+                list-style-type: none; 
+                li{
+                    line-height: 30px;
+                    a{
+                        @include _main($position:relative , $f_size:14px , $color:#8b8b8b , $padding:3px);
+                        text-decoration: none;
+                        display: block;  
+                    }      
+                }
+            }
+        } 
+         .active{
+                @include _main($height:274px !important  , $back-color:white !important);
+                overflow: hidden !important;
+                opacity: 1 !important;      
+        }
+        }
+        #pages_click{
+            position: relative;
+             #nav_page_click{
+            opacity: 0;
+            overflow: hidden;
+            transition: .4s ease-in-out;
+            @include _main($height:0px , $back-color:white ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+            list-style-type: none;
+            ul{
+                @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 0px );
+                flex-direction: column;
+                
+                list-style-type: none; 
+                li{
+                    line-height: 30px;
+                    a{
+                        @include _main($position:relative , $f_size:14px , $color:#8b8b8b , $padding:3px);
+                        text-decoration: none;
+                        display: block;  
+                    }      
+                }
+            }
+        } 
+         .active{
+                @include _main($height:108px !important  , $back-color:white !important);
+                overflow: hidden !important;
+                opacity: 1 !important;      
+        }
+        }
+        #shop_click{
+            position: relative;
+             #nav_shop_click{
+            opacity: 0;
+            overflow: hidden;
+            transition: .4s ease-in-out;
+            @include _main($height:0px , $back-color:white ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+            list-style-type: none;
+            ul{
+                @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 0px );
+                flex-direction: column;
+                
+                list-style-type: none; 
+                li{
+                    line-height: 30px;
+                    a{
+                        @include _main($position:relative , $f_size:14px , $color:#8b8b8b , $padding:3px);
+                        text-decoration: none;
+                        display: block;  
+                    }      
+                }
+            }
+        } 
+         .active{
+                @include _main($height:214px !important  , $back-color:white !important);
+                overflow: hidden !important;
+                opacity: 1 !important;      
+        }
+        }
+        #porto_click{
+            position: relative;
+             #nav_porto_click{
+            opacity: 0;
+            overflow: hidden;
+            transition: .4s ease-in-out;
+            @include _main($height:0px , $back-color:white ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+            list-style-type: none;
+            ul{
+                @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 0px );
+                flex-direction: column;
+                
+                list-style-type: none; 
+                li{
+                    line-height: 30px;
+                    a{
+                        @include _main($position:relative , $f_size:14px , $color:#8b8b8b , $padding:3px);
+                        text-decoration: none;
+                        display: block;  
+                    }      
+                }
+            }
+        } 
+         .active{
+                @include _main($height:209px !important  , $back-color:white !important);
+                overflow: hidden !important;
+                opacity: 1 !important;      
+        }
+        }
+        #blog_click{
+            position: relative;
+             #nav_blog_click{
+            opacity: 0;
+            overflow: hidden;
+            transition: .4s ease-in-out;
+            @include _main($height:0px , $back-color:white ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+            list-style-type: none;
+            ul{
+                @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 0px );
+                flex-direction: column;
+                
+                list-style-type: none; 
+                li{
+                    line-height: 30px;
+                    a{
+                        @include _main($position:relative , $f_size:14px , $color:#8b8b8b , $padding:3px);
+                        text-decoration: none;
+                        display: block;  
+                    }      
+                }
+            }
+        } 
+         .active{
+                @include _main($height:210px !important  , $back-color:white !important);
+                overflow: hidden !important;
+                opacity: 1 !important;      
+        }
+        }
+        #ele_click{
+            position: relative;
+             #nav_ele_click{
+            opacity: 0;
+            overflow: hidden;
+            transition: .4s ease-in-out;
+            @include _main($height:0px , $back-color:white ,$display:flex , $align_it:center , $margin:0px , $padding:0px );
+            list-style-type: none;
+            ul{
+                @include _main($width:100% , $display:flex , $align_it:baseline , $margin:0px , $padding: 0px );
+                flex-direction: column;
+                
+                list-style-type: none; 
+                li{
+                    line-height: 30px;
+                    a{
+                        @include _main($position:relative , $f_size:14px , $color:#8b8b8b , $padding:3px);
+                        text-decoration: none;
+                        display: block;  
+                    }      
+                }
+            }
+        } 
+         .active{
+                @include _main($height:198px !important  , $back-color:white !important);
+                overflow: hidden !important;
+                opacity: 1 !important;      
+        }
+        }  
+
+
+            }
+    }
+    @media (max-width:1000px) {
+        display: block;
+    }
+}
